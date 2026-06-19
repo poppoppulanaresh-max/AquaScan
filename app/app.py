@@ -42,6 +42,12 @@ if 'submission_id' not in st.session_state:
 from app.styles.theme import inject_theme
 inject_theme()
 
+# Clean up module shadowing before redirecting to sub-pages
+# This deletes the shadowed single-file 'app' module from cache so that
+# Python is forced to resolve the 'app' folder as a package on subsequent page imports.
+if 'app' in sys.modules and not hasattr(sys.modules['app'], '__path__'):
+    del sys.modules['app']
+
 # Automatically redirect the root execution to 1_home.py
 try:
     st.switch_page("pages/1_home.py")

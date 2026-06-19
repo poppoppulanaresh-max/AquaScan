@@ -27,7 +27,7 @@ To run the application locally on your laptop:
    ```
 4. **Run the Application**:
    ```bash
-   streamlit run app/main.py
+   streamlit run app/app.py
    ```
 
 ---
