@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: cyan
 sdk: streamlit
 sdk_version: 1.28.0
-app_file: app/app.py
+app_file: app/main.py
 pinned: true
 license: mit
 ---
@@ -31,7 +31,7 @@ AquaScan is an AI-powered detection and analytics system for mapping microplasti
    ```
 2. **Start the App**:
    ```bash
-   streamlit run app/app.py
+   streamlit run app/main.py
    ```
 3. **Training & Advanced usage**:
    - Training notebooks are available in `notebooks/`.
